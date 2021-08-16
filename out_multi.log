@@ -1,0 +1,214 @@
+Initialize main worker
+Called end_point_generator
+{1: [5, 6], 2: [7], 3: [1, 6], 4: [9, 5], 5: [], 6: [9, 8], 7: [8], 8: [4], 9: [], 10: [2]}
+node_clusters:  [[5, 9], [4], [8], [6, 7], [1, 2], [3, 10]]
+Current cache_hit_list: [50.0, 50.0]
+Current cache_hit_list: [100.0]
+Current cache_hit_list: [100.0]
+Current cache_hit_list: [50.0, 50.0]
+Current cache_hit_list: [50.0, 50.0]
+Current cache_hit_list: [50.0, 50.0]
+Cluster: cluster_1[2]: 
+end_point_5
+end_point_9
+
+
+Cluster: cluster_2[1]: 
+end_point_4
+
+
+Cluster: cluster_3[1]: 
+end_point_8
+
+
+Cluster: cluster_4[2]: 
+end_point_6
+end_point_7
+
+
+Cluster: cluster_5[2]: 
+end_point_1
+end_point_2
+
+
+Cluster: cluster_6[2]: 
+end_point_3
+end_point_10
+
+
+
+
+START PROCESSING REQUESTS:
+
+
+REQUEST NUMBER: 1
+Initiate API call to cluster: cluster_3 -> end point: end_point_8
+Called end point: end_point_8
+Cache hit for: end_point_8
+Finished API call to end point: end_point_8, time taken: 9.5367431640625e-06
+add_server_latency for end_point_8 with 9.5367431640625e-06
+add_latency for end_point_8 by 9.5367431640625e-06
+update_tail_latency for end_point_8
+found tail_latency: 9.5367431640625e-06
+reallocate_cache for robinhood cluster
+Current overall_tail_latency: 9.5367431640625e-06
+Current cache_hit_list: [100.0]
+Current tail_latencies: [9.5367431640625e-06]
+
+
+
+REQUEST NUMBER: 2
+Initiate API call to cluster: cluster_3 -> end point: end_point_8
+Called end point: end_point_8
+Cache hit for: end_point_8
+Finished API call to end point: end_point_8, time taken: 6.198883056640625e-06
+add_server_latency for end_point_8 with 6.198883056640625e-06
+add_latency for end_point_8 by 6.198883056640625e-06
+update_tail_latency for end_point_8
+found tail_latency: 6.198883056640625e-06
+reallocate_cache for robinhood cluster
+Current overall_tail_latency: 6.198883056640625e-06
+Current cache_hit_list: [100.0]
+Current tail_latencies: [6.198883056640625e-06]
+
+
+
+REQUEST NUMBER: 3
+Initiate API call to cluster: cluster_1 -> end point: end_point_5
+Called end point: end_point_5
+Finished API call to end point: end_point_5, time taken: 1.910158395767212
+add_server_latency for end_point_5 with 1.910158395767212
+add_latency for end_point_5 by 1.910158395767212
+update_tail_latency for end_point_5
+found tail_latency: 1.910158395767212
+reallocate_cache for robinhood cluster
+Current overall_tail_latency: 0
+Current cache_hit_list: [75.0, 25.0]
+Current tail_latencies: [1.910158395767212, 0]
+
+
+
+REQUEST NUMBER: 4
+Initiate API call to cluster: cluster_2 -> end point: end_point_4
+Called end point: end_point_4
+Cache hit for: end_point_4
+Finished API call to end point: end_point_4, time taken: 1.3113021850585938e-05
+add_server_latency for end_point_4 with 1.3113021850585938e-05
+add_latency for end_point_4 by 1.3113021850585938e-05
+update_tail_latency for end_point_4
+found tail_latency: 1.3113021850585938e-05
+reallocate_cache for robinhood cluster
+Current overall_tail_latency: 1.3113021850585938e-05
+Current cache_hit_list: [100.0]
+Current tail_latencies: [1.3113021850585938e-05]
+
+
+
+REQUEST NUMBER: 5
+Initiate API call to cluster: cluster_2 -> end point: end_point_4
+Called end point: end_point_4
+Cache hit for: end_point_4
+Finished API call to end point: end_point_4, time taken: 7.152557373046875e-06
+add_server_latency for end_point_4 with 7.152557373046875e-06
+add_latency for end_point_4 by 7.152557373046875e-06
+update_tail_latency for end_point_4
+found tail_latency: 7.152557373046875e-06
+reallocate_cache for robinhood cluster
+Current overall_tail_latency: 7.152557373046875e-06
+Current cache_hit_list: [100.0]
+Current tail_latencies: [7.152557373046875e-06]
+
+
+
+REQUEST NUMBER: 6
+Initiate API call to cluster: cluster_4 -> end point: end_point_7
+Called end point: end_point_7
+Called end point: end_point_8
+Cache hit for: end_point_8
+Finished API call to end point: end_point_7, time taken: 1.0314772129058838
+add_server_latency for end_point_7 with 1.0314772129058838
+add_latency for end_point_7 by 1.0314772129058838
+update_tail_latency for end_point_7
+found tail_latency: 1.0314772129058838
+reallocate_cache for robinhood cluster
+Current overall_tail_latency: 0
+Current cache_hit_list: [25.0, 75.0]
+Current tail_latencies: [0, 1.0314772129058838]
+
+
+
+REQUEST NUMBER: 7
+Initiate API call to cluster: cluster_3 -> end point: end_point_8
+Called end point: end_point_8
+Cache hit for: end_point_8
+Finished API call to end point: end_point_8, time taken: 1.049041748046875e-05
+add_server_latency for end_point_8 with 1.049041748046875e-05
+add_latency for end_point_8 by 1.049041748046875e-05
+update_tail_latency for end_point_8
+found tail_latency: 9.5367431640625e-06
+reallocate_cache for robinhood cluster
+Current overall_tail_latency: 9.5367431640625e-06
+Current cache_hit_list: [100.0]
+Current tail_latencies: [9.5367431640625e-06]
+
+
+
+REQUEST NUMBER: 8
+Initiate API call to cluster: cluster_5 -> end point: end_point_2
+Called end point: end_point_2
+Cache hit for: end_point_2
+Finished API call to end point: end_point_2, time taken: 5.7220458984375e-06
+add_server_latency for end_point_2 with 5.7220458984375e-06
+add_latency for end_point_2 by 5.7220458984375e-06
+update_tail_latency for end_point_2
+found tail_latency: 5.7220458984375e-06
+reallocate_cache for robinhood cluster
+Current overall_tail_latency: 0
+Current cache_hit_list: [25.0, 75.0]
+Current tail_latencies: [0, 5.7220458984375e-06]
+
+
+
+REQUEST NUMBER: 9
+Initiate API call to cluster: cluster_6 -> end point: end_point_3
+Called end point: end_point_3
+Cache hit for: end_point_3
+Finished API call to end point: end_point_3, time taken: 5.0067901611328125e-06
+add_server_latency for end_point_3 with 5.0067901611328125e-06
+add_latency for end_point_3 by 5.0067901611328125e-06
+update_tail_latency for end_point_3
+found tail_latency: 5.0067901611328125e-06
+reallocate_cache for robinhood cluster
+Current overall_tail_latency: 0
+Current cache_hit_list: [75.0, 25.0]
+Current tail_latencies: [5.0067901611328125e-06, 0]
+
+
+
+REQUEST NUMBER: 10
+Initiate API call to cluster: cluster_4 -> end point: end_point_6
+Called end point: end_point_6
+Cache hit for: end_point_6
+Finished API call to end point: end_point_6, time taken: 4.76837158203125e-06
+add_server_latency for end_point_6 with 4.76837158203125e-06
+add_latency for end_point_6 by 4.76837158203125e-06
+update_tail_latency for end_point_6
+found tail_latency: 4.76837158203125e-06
+reallocate_cache for robinhood cluster
+Current overall_tail_latency: 4.76837158203125e-06
+Current cache_hit_list: [12.5, 87.5]
+Current tail_latencies: [4.76837158203125e-06, 1.0314772129058838]
+
+
+
+Cluster: cluster_1: tail_latency_list: [1.910158395767212, 0], overall_tail_latency: 0
+Cluster: cluster_2: tail_latency_list: [7.152557373046875e-06], overall_tail_latency: 7.152557373046875e-06
+Cluster: cluster_3: tail_latency_list: [9.5367431640625e-06], overall_tail_latency: 9.5367431640625e-06
+Cluster: cluster_4: tail_latency_list: [4.76837158203125e-06, 1.0314772129058838], overall_tail_latency: 4.76837158203125e-06
+Cluster: cluster_5: tail_latency_list: [0, 5.7220458984375e-06], overall_tail_latency: 0
+Cluster: cluster_6: tail_latency_list: [5.0067901611328125e-06, 0], overall_tail_latency: 0
+Overall System Tail Latency: 1.0314772129058838
+
+
+END PROCESSING REQUESTS:
+

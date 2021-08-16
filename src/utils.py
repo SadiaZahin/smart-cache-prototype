@@ -15,3 +15,8 @@ def read_from_json_file(file_name):
     with open(file_name, 'r') as myfile:
         data = myfile.read()
         return json.loads(data)
+
+
+def write_to_json_file(data, file_name):
+    with open(file_name, "w") as myfile:
+        json.dump(data, myfile, indent=4, sort_keys=True)

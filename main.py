@@ -2,12 +2,12 @@ from src.endpoints import EndPoint
 from typing import List
 import random
 import time
-from src.utils import read_from_json_file
+from src.utils import read_from_json_file, find_tail_latency
 from src.topological_sort import TopologicalGraph
 from src.cluster import Cluster
 
 
-def cluster_generator():
+def cluster_generator(single_cluster=False):
     print(f"Called end_point_generator")
 
     graph_raw_data = read_from_json_file("./dataset/dag.json")
@@ -35,6 +35,9 @@ def cluster_generator():
     clusters: List[Cluster] = []
 
     cluster_id = 1
+
+    all_end_point_list: List[EndPoint] = []
+
     for cluster in topological_graph.clusters:
         end_point_list: List[EndPoint] = []
         for server_name in cluster:
@@ -50,23 +53,30 @@ def cluster_generator():
             end_point_reference[server_name] = end_point
             end_point_list.append(end_point)
 
-        cluster = Cluster(f"cluster_{cluster_id}", end_point_list)
+        if single_cluster:
+            all_end_point_list.extend(end_point_list)
+        else:
+            cluster = Cluster(f"cluster_{cluster_id}", end_point_list)
+            clusters.append(cluster)
+            cluster_id += 1
+
+    if single_cluster:
+        cluster = Cluster(f"cluster_{cluster_id}", all_end_point_list)
         clusters.append(cluster)
-        cluster_id += 1
 
     return clusters
 
 
-def main():
+def main(single_cluster=False):
     print(f"Initialize main worker")
-    clusters: List[Cluster] = cluster_generator()
+    clusters: List[Cluster] = cluster_generator(single_cluster)
 
     for cluster in clusters:
         cluster.print_cluster()
 
     print(f"\n\nSTART PROCESSING REQUESTS:\n\n")
 
-    for i in range(1, 100):
+    for i in range(1, 11):
         print(f"REQUEST NUMBER: {i}")
         rand_cluster_idx = random.randint(0, len(clusters)-1)
         cluster = clusters[rand_cluster_idx]
@@ -84,8 +94,18 @@ def main():
         cluster.robinhood.add_server_latency(end_point.server.server_name, response_time)
         print(f"\n\n")
 
+    all_latencies = []
+
+    for cluster in clusters:
+        cluster.print_latency()
+        for endpoint in cluster.end_points_list:
+            all_latencies.extend(endpoint.server.latency_list)
+
+    overall_system_tail_latency = find_tail_latency(all_latencies)
+    print(f"Overall System Tail Latency: {overall_system_tail_latency}")
+
     print(f"\n\nEND PROCESSING REQUESTS:\n\n")
 
 
 if __name__ == "__main__":
-    main()
+    main(single_cluster=False)

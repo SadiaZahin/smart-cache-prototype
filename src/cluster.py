@@ -17,3 +17,8 @@ class Cluster:
         for endpoint in self.end_points_list:
             print(f"{endpoint.server.server_name}")
         print("\n")
+
+    def print_latency(self):
+        tail_latency_list = [endpoint.server.tail_latency for endpoint in self.end_points_list]
+        overall_tail_latency = self.robinhood.overall_tail_latency
+        print(f"Cluster: {self.cluster_name}: tail_latency_list: {tail_latency_list}, overall_tail_latency: {overall_tail_latency}")
