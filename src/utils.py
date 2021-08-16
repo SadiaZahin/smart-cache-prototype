@@ -1,3 +1,6 @@
+import json
+
+
 def find_tail_latency(latency_list):
     latency_list.sort()
     if len(latency_list) == 0:
@@ -6,3 +9,9 @@ def find_tail_latency(latency_list):
     if tail_idx < 0:
         tail_idx = 0
     return latency_list[tail_idx]
+
+
+def read_from_json_file(file_name):
+    with open(file_name, 'r') as myfile:
+        data = myfile.read()
+        return json.loads(data)

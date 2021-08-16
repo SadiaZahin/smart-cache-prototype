@@ -1,0 +1,65 @@
+{
+    "total_servers": 10,
+    "servers": [
+        {
+            "server_name": 1,
+            "dependencies": [4, 5, 7],
+            "min_time": 0,
+            "max_time": 1
+        },
+        {
+            "server_name": 2,
+            "dependencies": [3, 5, 8],
+            "min_time": 0,
+            "max_time": 1
+        },
+        {
+            "server_name": 3,
+            "dependencies": [7, 8],
+            "min_time": 1,
+            "max_time": 2
+        },
+        {
+            "server_name": 4,
+            "dependencies": [6, 9],
+            "min_time": 2,
+            "max_time": 3
+        },
+        {
+            "server_name": 5,
+            "dependencies": [6, 9, 10],
+            "min_time": 0,
+            "max_time": 1
+        },
+        {
+            "server_name": 6,
+            "dependencies": [9],
+            "min_time": 0,
+            "max_time": 1
+        },
+        {
+            "server_name": 7,
+            "dependencies": [8, 9],
+            "min_time": 3,
+            "max_time": 5
+        },
+        {
+            "server_name": 8,
+            "dependencies": [],
+            "min_time": 1,
+            "max_time": 2
+        },
+        {
+            "server_name": 9,
+            "dependencies": [],
+            "min_time": 0,
+            "max_time": 1
+        },
+        {
+            "server_name": 10,
+            "dependencies": [],
+            "min_time": 0,
+            "max_time": 1
+        }
+    ]
+}
