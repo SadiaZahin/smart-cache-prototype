@@ -1,8 +1,8 @@
-from endpoints import end_point_generator, EndPoint
+from src.endpoints import end_point_generator, EndPoint
 from typing import List
 import random
 import time
-from robinhood import RobinHood
+from src.robinhood import RobinHood
 
 def main():
     print(f"Initialize main worker")
@@ -14,7 +14,7 @@ def main():
 
     print(f"\n\nSTART PROCESSING REQUESTS:\n\n")
 
-    for i in range(1, 1001):
+    for i in range(1, 5):
         print(f"REQUEST NUMBER: {i}")
         rand_idx = random.randint(0, len(end_points)-1)
         end_point = end_points[rand_idx]

@@ -1,5 +1,6 @@
-from server import Server
+from src.server import Server
 from typing import List, Dict
+from src.utils import find_tail_latency
 
 class RobinHood:
     def __init__(self, cache_memory_limit: int, server_list: List[Server]):
@@ -7,6 +8,7 @@ class RobinHood:
         self.cache_memory_used = 0
         self.server_list = server_list
         self.server_map: Dict[str, Server] = {}
+        self.overall_tail_latency = 0
 
         avg_cache_hit_ratio = 100/len(server_list)
  
@@ -47,6 +49,7 @@ class RobinHood:
 
         max_latency_server.cache_hit_percentage += allocate_amount
         min_latency_server.cache_hit_percentage -= allocate_amount
+        self.find_overall_tail_latency()
         self.current_cache_allocation()
     
     def current_cache_allocation(self):
@@ -56,3 +59,9 @@ class RobinHood:
     def current_tail_latencies(self):
         tail_latencies = [server.tail_latency for server in self.server_list]
         print(f"Current tail_latencies: {tail_latencies}")
+
+    def find_overall_tail_latency(self):
+        latency_list = [server.tail_latency for server in self.server_list]
+        self.overall_tail_latency = find_tail_latency(latency_list)
+        print(f"Current overall_tail_latency: {self.overall_tail_latency}")
+    
