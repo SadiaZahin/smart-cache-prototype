@@ -63,4 +63,4 @@ def generate_dag(total_nodes, dependency_count):
 
 
 if __name__ == "__main__":
-    generate_dag(10, 12)
+    generate_dag(20, 15)
