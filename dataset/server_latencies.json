@@ -1,0 +1,142 @@
+{
+    "cluster_tail_latencies": [
+        {
+            "cluster": "cluster_1",
+            "tail_latency": "1.35410786"
+        },
+        {
+            "cluster": "cluster_2",
+            "tail_latency": "0.00006890"
+        },
+        {
+            "cluster": "cluster_3",
+            "tail_latency": "0.00002885"
+        },
+        {
+            "cluster": "cluster_4",
+            "tail_latency": "0.66428280"
+        },
+        {
+            "cluster": "cluster_5",
+            "tail_latency": "1.84543705"
+        },
+        {
+            "cluster": "cluster_6",
+            "tail_latency": "1.69985723"
+        },
+        {
+            "cluster": "cluster_7",
+            "tail_latency": "4.07306290"
+        },
+        {
+            "cluster": "cluster_8",
+            "tail_latency": "1.77479506"
+        },
+        {
+            "cluster": "cluster_9",
+            "tail_latency": "0.00008202"
+        }
+    ],
+    "server_tail_latencies": [
+        {
+            "cluster": "cluster_1",
+            "server_name": "end_point_7",
+            "tail_latency": "0.77587104"
+        },
+        {
+            "cluster": "cluster_1",
+            "server_name": "end_point_17",
+            "tail_latency": "1.35410786"
+        },
+        {
+            "cluster": "cluster_1",
+            "server_name": "end_point_18",
+            "tail_latency": "1.14316082"
+        },
+        {
+            "cluster": "cluster_1",
+            "server_name": "end_point_19",
+            "tail_latency": "1.66827178"
+        },
+        {
+            "cluster": "cluster_2",
+            "server_name": "end_point_1",
+            "tail_latency": "0.00006890"
+        },
+        {
+            "cluster": "cluster_2",
+            "server_name": "end_point_8",
+            "tail_latency": "1.94273210"
+        },
+        {
+            "cluster": "cluster_3",
+            "server_name": "end_point_10",
+            "tail_latency": "0.00002885"
+        },
+        {
+            "cluster": "cluster_4",
+            "server_name": "end_point_13",
+            "tail_latency": "1.36411381"
+        },
+        {
+            "cluster": "cluster_4",
+            "server_name": "end_point_20",
+            "tail_latency": "0.66428280"
+        },
+        {
+            "cluster": "cluster_5",
+            "server_name": "end_point_3",
+            "tail_latency": "1.87467003"
+        },
+        {
+            "cluster": "cluster_5",
+            "server_name": "end_point_9",
+            "tail_latency": "1.84543705"
+        },
+        {
+            "cluster": "cluster_6",
+            "server_name": "end_point_2",
+            "tail_latency": "0.00001884"
+        },
+        {
+            "cluster": "cluster_6",
+            "server_name": "end_point_11",
+            "tail_latency": "2.15409684"
+        },
+        {
+            "cluster": "cluster_6",
+            "server_name": "end_point_4",
+            "tail_latency": "1.69985723"
+        },
+        {
+            "cluster": "cluster_7",
+            "server_name": "end_point_6",
+            "tail_latency": "5.33807707"
+        },
+        {
+            "cluster": "cluster_7",
+            "server_name": "end_point_15",
+            "tail_latency": "0.00003505"
+        },
+        {
+            "cluster": "cluster_7",
+            "server_name": "end_point_16",
+            "tail_latency": "4.07306290"
+        },
+        {
+            "cluster": "cluster_8",
+            "server_name": "end_point_5",
+            "tail_latency": "1.77479506"
+        },
+        {
+            "cluster": "cluster_8",
+            "server_name": "end_point_12",
+            "tail_latency": "2.08990216"
+        },
+        {
+            "cluster": "cluster_9",
+            "server_name": "end_point_14",
+            "tail_latency": "0.00008202"
+        }
+    ]
+}

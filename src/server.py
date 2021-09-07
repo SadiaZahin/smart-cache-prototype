@@ -1,6 +1,12 @@
 import collections
 from src.utils import find_tail_latency
 
+"""
+    The Server class for endpoints.
+    It'll contain the functionalities for maintaining the latencies.
+"""
+
+
 class Server:
  
     def __init__(self, server_name, server_func):

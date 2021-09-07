@@ -1,4 +1,9 @@
 
+"""
+    TopologicalGraph class will contain standard topological sort functionalities
+"""
+
+
 class TopologicalGraph:
     def __init__(self, total_nodes):
         self.graph = {}

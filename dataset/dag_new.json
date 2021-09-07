@@ -2,71 +2,63 @@
     "servers": [
         {
             "dependencies": [
-                9
+                9,
+                3
             ],
-            "max_time": 3,
-            "min_time": 1,
+            "max_time": 1,
+            "min_time": 0,
             "server_name": 1
         },
         {
-            "dependencies": [
-                9,
-                6
-            ],
-            "max_time": 2,
+            "dependencies": [],
+            "max_time": 1,
             "min_time": 0,
             "server_name": 2
         },
         {
             "dependencies": [
-                7,
+                4,
                 6
             ],
-            "max_time": 2,
-            "min_time": 1,
+            "max_time": 1,
+            "min_time": 0,
             "server_name": 3
         },
         {
             "dependencies": [
-                1,
-                9
+                5
             ],
             "max_time": 2,
-            "min_time": 1,
+            "min_time": 0,
             "server_name": 4
         },
         {
             "dependencies": [
-                4
+                9,
+                8
             ],
             "max_time": 2,
-            "min_time": 1,
+            "min_time": 0,
             "server_name": 5
         },
         {
             "dependencies": [
-                4,
                 5
-            ],
-            "max_time": 3,
-            "min_time": 1,
-            "server_name": 6
-        },
-        {
-            "dependencies": [
-                10
             ],
             "max_time": 2,
             "min_time": 0,
+            "server_name": 6
+        },
+        {
+            "dependencies": [],
+            "max_time": 3,
+            "min_time": 1,
             "server_name": 7
         },
         {
-            "dependencies": [
-                6,
-                2
-            ],
-            "max_time": 2,
-            "min_time": 1,
+            "dependencies": [],
+            "max_time": 1,
+            "min_time": 0,
             "server_name": 8
         },
         {
@@ -76,9 +68,7 @@
             "server_name": 9
         },
         {
-            "dependencies": [
-                8
-            ],
+            "dependencies": [],
             "max_time": 2,
             "min_time": 1,
             "server_name": 10

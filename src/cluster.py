@@ -2,6 +2,11 @@ from src.endpoints import EndPoint
 from typing import List
 from src.robinhood import RobinHood
 
+"""
+    Every Cluster object will contain all the servers and their end points.
+    They will also have a Robinhood instance associated with them.
+"""
+
 
 class Cluster:
 

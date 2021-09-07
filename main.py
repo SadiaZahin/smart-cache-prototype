@@ -107,24 +107,48 @@ def main(single_cluster=False):
     list_of_server_names = []
     list_of_server_latencies = []
     all_latencies = []
+
+    server_tail_latency_stat = {
+        "server_tail_latencies": [],
+        "cluster_tail_latencies": [],
+    }
+
     for cluster in clusters:
         cluster.print_latency()
         for endpoint in cluster.end_points_list:
             all_latencies.extend(endpoint.server.latency_list)
             list_of_server_latencies.append(list(endpoint.server.latency_list))
             list_of_server_names.append(endpoint.server.server_name)
+            server_tail_latency_stat["server_tail_latencies"].append({
+                "tail_latency": "{:.8f}".format(endpoint.server.tail_latency),
+                "server_name": endpoint.server.server_name,
+                "cluster": cluster.cluster_name
+            })
+            # server_tail_latency_stat[endpoint.server.server_name] = "{:.8f}".format(end_point.server.tail_latency)
+
+        server_tail_latency_stat["cluster_tail_latencies"].append({
+            "tail_latency": "{:.8f}".format(cluster.robinhood.overall_tail_latency),
+            "cluster": cluster.cluster_name
+        })
 
 
     overall_system_tail_latency = find_tail_latency(all_latencies)
+    all_latencies = ["{:.8f}".format(latency) for latency in all_latencies]
+
     print(f"Overall System Tail Latency: {overall_system_tail_latency}")
     all_latencies_data = {
         "all_latencies": all_latencies
     }
-    write_to_json_file(all_latencies_data, "./dataset/all_latencies.json")
-    #write_to_json_file(all_latencies_data, "./dataset/all_latencies_only_robinhood.json")
+    if single_cluster:
+        write_to_json_file(all_latencies_data, "./dataset/all_latencies_only_robinhood.json")
+        write_to_json_file(server_tail_latency_stat, "./dataset/server_latencies_only_robinhood.json")
+    else:
+        write_to_json_file(all_latencies_data, "./dataset/all_latencies.json")
+        write_to_json_file(server_tail_latency_stat, "./dataset/server_latencies.json")
+
 
     print(f"\n\nEND PROCESSING REQUESTS:\n\n")
 
 
 if __name__ == "__main__":
-    main(single_cluster=False)
+    main(single_cluster=False)  # single_cluster TRUE means only Robinhood

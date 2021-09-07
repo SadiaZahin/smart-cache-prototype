@@ -2,6 +2,12 @@ from src.server import Server
 from typing import List, Dict
 from src.utils import find_tail_latency
 
+"""
+    The RobinHood class is responsible to manage all the robinhood functionalities.
+    It'll contain info for all servers who are associated with this instance. 
+"""
+
+
 class RobinHood:
     def __init__(self, cache_memory_limit: int, server_list: List[Server]):
         self.cache_memory_limit = cache_memory_limit
