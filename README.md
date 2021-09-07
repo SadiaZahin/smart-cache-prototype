@@ -16,4 +16,8 @@ Python 3.6
     The default parameter is set to single_cluster = False. Which simulates the clustered Robinhood.  
     Set to single_cluster = True, to compare with standard Robinhood.
 
-  
+# Minimum working example
+
+python dag_generator.py  
+python request_generator.py  
+python main.py
